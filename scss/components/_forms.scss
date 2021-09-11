@@ -1,0 +1,494 @@
+.item-form {
+	font-family: $font-primary;
+}
+
+.sheet-header {
+	flex: 0 auto;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin-bottom: 10px;
+
+	.profile-img {
+		flex: 0 0 100px;
+		height: 100px;
+		margin-right: 10px;
+		border: none;
+	}
+
+	// .header-fields {
+	//   flex: 1;
+	// }
+
+	h1.charname {
+		height: 50px;
+		padding: 0px;
+		margin: 5px 0;
+		border-bottom: 0;
+		input {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+		}
+	}
+
+	.right-side {
+		padding: 0 0 0 30px;
+	}
+}
+
+.sheet-tabs {
+	flex: 0;
+	font-size: 18px;
+	font-family: $font-oswald;
+	text-transform: uppercase;
+}
+
+.fallout.sheet .window-content form {
+	height: 100%;
+	overflow: hidden;
+}
+
+.fallout.sheet .window-content .tab {
+	height: 100%;
+	overflow-y: auto;
+}
+
+.fallout.sheet .editor {
+	height: 100%;
+}
+.fallout.sheet .editor .editor-content {
+	height: 100%;
+}
+
+.description-field {
+	background: rgba(245, 245, 220, 0.301);
+	padding: 0 5px;
+	border: 1px solid lightgray;
+	.editor {
+		height: 100%;
+	}
+}
+
+//* .editor,
+.editor .editor-content {
+	min-height: 200px;
+}
+
+// PIPBOY
+.condition-box {
+	.pipboy-status-screen {
+		min-width: $screen-size;
+		max-width: $screen-size;
+		height: $screen-size;
+		max-height: $screen-size;
+		margin: 0 0 5px 0;
+		border: 0;
+		padding: 0;
+		display: block;
+		position: relative;
+		background-color: $c-pipboy-screen;
+
+		.body-part {
+			position: absolute;
+			min-width: $screen-size;
+			width: $screen-size;
+			min-height: $screen-size;
+			background-size: $screen-size $screen-size;
+			//filter: invert(64%) sepia(78%) saturate(4274%) hue-rotate(87deg) brightness(111%) contrast(101%);
+			filter: invert(63%) sepia(9%) saturate(1297%) hue-rotate(154deg) brightness(93%) contrast(86%);
+		}
+
+		&.character {
+			.body-part {
+				&.head {
+					&.healthy {
+						background-image: url(../assets/ui/pipboy-body/character/healthy/head.png);
+					}
+					&.wounded {
+						background-image: url(../assets/ui/pipboy-body/character/wounded/head.png);
+					}
+					&.crippled {
+						background-image: url(../assets/ui/pipboy-body/character/crippled/head.png);
+					}
+				}
+				&.torso {
+					&.healthy {
+						background-image: url(../assets/ui/pipboy-body/character/healthy/torso.png);
+					}
+					&.wounded {
+						background-image: url(../assets/ui/pipboy-body/character/wounded/torso.png);
+					}
+					&.crippled {
+						background-image: url(../assets/ui/pipboy-body/character/crippled/torso.png);
+					}
+				}
+				&.armL {
+					&.healthy {
+						background-image: url(../assets/ui/pipboy-body/character/healthy/armL.png);
+					}
+					&.wounded {
+						background-image: url(../assets/ui/pipboy-body/character/wounded/armL.png);
+					}
+					&.crippled {
+						background-image: url(../assets/ui/pipboy-body/character/crippled/armL.png);
+					}
+				}
+				&.armR {
+					&.healthy {
+						background-image: url(../assets/ui/pipboy-body/character/healthy/armR.png);
+					}
+					&.wounded {
+						background-image: url(../assets/ui/pipboy-body/character/wounded/armR.png);
+					}
+					&.crippled {
+						background-image: url(../assets/ui/pipboy-body/character/crippled/armR.png);
+					}
+				}
+				&.legL {
+					&.healthy {
+						background-image: url(../assets/ui/pipboy-body/character/healthy/legL.png);
+					}
+					&.wounded {
+						background-image: url(../assets/ui/pipboy-body/character/wounded/legL.png);
+					}
+					&.crippled {
+						background-image: url(../assets/ui/pipboy-body/character/crippled/legL.png);
+					}
+				}
+				&.legR {
+					&.healthy {
+						background-image: url(../assets/ui/pipboy-body/character/healthy/legR.png);
+					}
+					&.wounded {
+						background-image: url(../assets/ui/pipboy-body/character/wounded/legR.png);
+					}
+					&.crippled {
+						background-image: url(../assets/ui/pipboy-body/character/crippled/legR.png);
+					}
+				}
+			}
+		}
+
+		&.robot {
+			.body-part {
+				&.wounded {
+					filter: invert(76%) sepia(13%) saturate(1393%) hue-rotate(25deg) brightness(95%) contrast(83%);
+				}
+				&.crippled {
+					filter: invert(67%) sepia(11%) saturate(4951%) hue-rotate(318deg) brightness(101%) contrast(78%);
+				}
+
+				&.head {
+					&.healthy {
+						background-image: url(../assets/ui/pipboy-body/robot/healthy/optics.png);
+					}
+					&.wounded {
+						background-image: url(../assets/ui/pipboy-body/robot/wounded/optics.png);
+					}
+					&.crippled {
+						background-image: url(../assets/ui/pipboy-body/robot/crippled/optics.png);
+					}
+				}
+				&.torso {
+					&.healthy {
+						background-image: url(../assets/ui/pipboy-body/robot/healthy/body.png);
+					}
+					&.wounded {
+						background-image: url(../assets/ui/pipboy-body/robot/wounded/body.png);
+					}
+					&.crippled {
+						background-image: url(../assets/ui/pipboy-body/robot/crippled/body.png);
+					}
+				}
+				&.armL {
+					&.healthy {
+						background-image: url(../assets/ui/pipboy-body/robot/healthy/arm1.png);
+					}
+					&.wounded {
+						background-image: url(../assets/ui/pipboy-body/robot/wounded/arm1.png);
+					}
+					&.crippled {
+						background-image: url(../assets/ui/pipboy-body/robot/crippled/arm1.png);
+					}
+				}
+				&.armR {
+					&.healthy {
+						background-image: url(../assets/ui/pipboy-body/robot/healthy/arm2.png);
+					}
+					&.wounded {
+						background-image: url(../assets/ui/pipboy-body/robot/wounded/arm2.png);
+					}
+					&.crippled {
+						background-image: url(../assets/ui/pipboy-body/robot/crippled/arm2.png);
+					}
+				}
+				&.legL {
+					&.healthy {
+						background-image: url(../assets/ui/pipboy-body/robot/healthy/arm3.png);
+					}
+					&.wounded {
+						background-image: url(../assets/ui/pipboy-body/robot/wounded/arm3.png);
+					}
+					&.crippled {
+						background-image: url(../assets/ui/pipboy-body/robot/crippled/arm3.png);
+					}
+				}
+				&.legR {
+					&.healthy {
+						background-image: url(../assets/ui/pipboy-body/robot/healthy/thruster.png);
+					}
+					&.wounded {
+						background-image: url(../assets/ui/pipboy-body/robot/wounded/thruster.png);
+					}
+					&.crippled {
+						background-image: url(../assets/ui/pipboy-body/robot/crippled/thruster.png);
+					}
+				}
+			}
+		}
+
+		.status-plaque {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			cursor: pointer;
+			min-width: 100px;
+			background-color: $f-plaque;
+			.values {
+				display: flex;
+				flex-direction: row;
+				//background-color: $f-blue;
+
+				.defense-type {
+					display: flex;
+					flex-direction: column;
+
+					.resistance-icon {
+						font-size: 1rem;
+						text-align: center;
+						color: $f-plaque-text;
+					}
+
+					.label-value {
+						margin: 0;
+						color: $f-plaque-text;
+					}
+				}
+			}
+
+			.status-header {
+				margin: 0;
+				padding: 2px 5px;
+				background-color: black;
+				p {
+					color: white;
+					margin: 0;
+				}
+			}
+
+			.status {
+				display: flex;
+				flex-direction: row;
+				min-height: 80px;
+				min-height: 20px;
+				background-repeat: no-repeat;
+
+				&.healthy {
+					background-image: url("../assets/ui/pipboy-body/bar-healthy.png");
+				}
+
+				&.wounded {
+					background-image: url("../assets/ui/pipboy-body/bar-wounded.png");
+				}
+
+				&.crippled {
+					background-image: url("../assets/ui/pipboy-body/bar-crippled.png");
+				}
+			}
+
+			&.head {
+				left: 50px;
+				top: 30px;
+			}
+
+			&.torso {
+				top: 140px;
+				left: 130px;
+			}
+
+			&.armL {
+				top: 190px;
+				left: 10px;
+			}
+
+			&.armR {
+				top: 190px;
+				right: 10px;
+			}
+
+			&.legL {
+				top: 300px;
+				left: 10px;
+			}
+
+			&.legR {
+				top: 300px;
+				right: 10px;
+			}
+		}
+	}
+}
+.box {
+	padding: 0 5px 5px 5px;
+	margin-bottom: 15px;
+	background-color: #e5e8ea1f;
+	//background-color: $c-font-prim-contra;
+	color: $c-font-prim;
+
+	&.padding5 {
+		padding: 5px 5px 5px 5px;
+	}
+	.items-list .item.items-header {
+		margin-top: 0px !important;
+	}
+
+	&.no-padding {
+		padding: 0 !important;
+		.box-header {
+			margin: 0 0 0 0;
+		}
+		& > div {
+			padding: 5px;
+		}
+	}
+
+	.box-header {
+		margin: 0 -5px 5px -5px;
+		padding: 5px 5px 2px 5px;
+		background-color: rgb(0, 0, 0);
+		color: white;
+		* {
+			padding: 0;
+			margin: 0;
+			color: white;
+		}
+	}
+}
+
+.bgOdd {
+	background-color: $f-list-green-1;
+}
+.bgEven {
+	background-color: $f-list-green-2;
+}
+
+.body-part-header {
+	background-color: rgb(43, 22, 41);
+	color: white;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 2px 5px;
+	h4 {
+		margin: 0;
+	}
+}
+
+.injury-bar {
+	display: flex;
+	margin-bottom: 5px;
+	padding: 1px;
+	//background-color: black;
+
+	//flex-direction: row;
+	//justify-content:space-between;
+	.injury-mark {
+		margin-right: 2px;
+		//border: 1px solid;
+		width: 100%;
+		cursor: pointer;
+		&.condition0 {
+			background-color: $f-healthy;
+			background-image: none;
+		}
+		&.condition1 {
+			background-color: $f-wounded;
+			background-color: none;
+			background-image: url(../assets/ui/sticking-plaster.svg);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		&.condition2 {
+			background-color: $f-crippled;
+			background-image: url(../assets/ui/drop.svg);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+	:last-child {
+		margin-right: 0;
+	}
+}
+
+.status-help-bar {
+	display: flex;
+	justify-content: space-between;
+	.help-item {
+		display: flex;
+		flex-direction: row;
+		align-items: baseline;
+	}
+	p {
+		font-size: 11px;
+		margin: 0;
+		padding: 0;
+	}
+}
+.symbol {
+	min-width: 12px;
+	max-width: 12px;
+	height: 12px;
+	margin-right: 3px;
+	flex-basis: 12px;
+
+	background-size: contain;
+	background-position: center;
+	background-repeat: none;
+
+	&.healthy {
+		background-color: $f-healthy;
+	}
+	&.wounded {
+		background-image: url(../assets/ui/sticking-plaster.svg);
+	}
+	&.crippled {
+		background-image: url(../assets/ui/drop.svg);
+	}
+}
+
+.power-armor-status {
+	position: relative;
+	max-width: 136px;
+	height: 180px;
+	.body-part {
+		padding: 5px;
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.2);
+		width: 40px;
+		.head {
+			background-color: black;
+			color: white;
+		}
+		.content {
+			text-align: center;
+		}
+
+		input [type="number"] {
+			text-align: center;
+		}
+	}
+}
