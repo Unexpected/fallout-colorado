@@ -3,7 +3,7 @@
 	"title": "Fallout 2d20 - Colorado",
 	"description": "Custom Fallout 2d20 for Colorado Campaign",
 	"version": "1.0",
-	"minimumCoreVersion": "0.8.9",
+	"minimumCoreVersion": "0.8.6",
 	"compatibleCoreVersion": "0.8.9",
 	"author": "flibble",
 	"esmodules": ["module/fallout.mjs"],
@@ -35,6 +35,6 @@
 	"socket": true,
 	"url": "https://github.com/Unexpected/fallout-colorado",
 	"manifest": "https://raw.githubusercontent.com/Unexpected/fallout-colorado/main/system.json",
-	"download": "https://github.com/Unexpected/fallout-colorado/archive/refs/heads/main.zip",
+	"download": "https://github.com/Unexpected/fallout-colorado/archive/refs/heads/master.zip",
 	"license": "LICENSE.txt"
 }
