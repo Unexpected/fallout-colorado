@@ -1,11 +1,11 @@
 {
-	"name": "fallout-colorado",
-	"title": "Fallout 2d20 - Colorado",
-	"description": "Custom Fallout 2d20 for Colorado Campaign",
-	"version": "1.0",
+	"name": "fallout",
+	"title": "Fallout Colorado",
+	"description": "The unofficial Fallout 2d20 System for FoundryVTT - custom",
+	"version": "1.21",
 	"minimumCoreVersion": "0.8.6",
 	"compatibleCoreVersion": "0.8.9",
-	"author": "flibble",
+	"author": "HappySteve",
 	"esmodules": ["module/fallout.mjs"],
 	"styles": ["css/fallout.css"],
 	"scripts": [],
@@ -13,14 +13,14 @@
 		{
 			"name": "skills",
 			"label": "Skills",
-			"system": "fallout-colorado",
+			"system": "fallout",
 			"path": "./packs/skills.db",
 			"entity": "Item"
 		},
 		{
 			"name": "fallout-macros",
 			"label": "Fallout Macros",
-			"system": "fallout-colorado",
+			"system": "fallout",
 			"path": "./packs/fallout-macros.db",
 			"entity": "Macro"
 		}
